@@ -1,14 +1,13 @@
-import { useRef } from "react";
 import { View } from "react-native";
 import { Button, Spacer } from "tamagui";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { CompositeScreenProps } from "@react-navigation/native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../App";
+import { DrawerStackParamList, RootStackParamList } from "../App";
 
 type Props = CompositeScreenProps<
   NativeStackScreenProps<RootStackParamList>,
-  NativeStackScreenProps<RootStackParamList, "HomeScreen">
+  NativeStackScreenProps<DrawerStackParamList, "HomeScreen">
 >;
 const Home = (props: Props) => {
   const handlePress = async () => {
